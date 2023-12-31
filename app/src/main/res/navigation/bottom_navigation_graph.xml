@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/bestFoodFragment"
+        android:name="com.woojun.yumyumschool.BestFoodFragment"
+        android:label="fragment_best_food"
+        tools:layout="@layout/fragment_best_food" />
+    <fragment
+        android:id="@+id/foodInfoFragment"
+        android:name="com.woojun.yumyumschool.FoodInfoFragment"
+        android:label="fragment_food_info"
+        tools:layout="@layout/fragment_food_info" />
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="com.woojun.yumyumschool.FoodListFragment"
+        android:label="fragment_food_list"
+        tools:layout="@layout/fragment_food_list" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.woojun.yumyumschool.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>
