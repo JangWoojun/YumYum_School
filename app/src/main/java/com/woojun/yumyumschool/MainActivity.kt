@@ -25,14 +25,6 @@ class MainActivity : AppCompatActivity() {
                         navController.navigate(R.id.foodList)
                         true
                     }
-                    R.id.community -> {
-                        navController.navigate(R.id.community)
-                        true
-                    }
-                    R.id.bestFood -> {
-                        navController.navigate(R.id.bestFood)
-                        true
-                    }
                     else -> {
                         false
                     }
@@ -40,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             fab.setOnClickListener {
-
+                navController.navigate(R.id.bestFood)
             }
 
         }

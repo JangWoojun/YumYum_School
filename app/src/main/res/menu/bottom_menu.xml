@@ -5,17 +5,9 @@
         android:icon="@drawable/home_icon"
         android:title=""/>
     <item
+        android:title=""/>
+    <item
         android:id="@+id/foodList"
         android:icon="@drawable/food_icon"
-        android:title=""/>
-    <item
-        android:title=""/>
-    <item
-        android:id="@+id/community"
-        android:icon="@drawable/chat_icon"
-        android:title=""/>
-    <item
-        android:id="@+id/bestFood"
-        android:icon="@drawable/hot_icon"
         android:title=""/>
 </menu>
