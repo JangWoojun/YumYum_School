@@ -60,26 +60,35 @@
                 app:layout_constraintStart_toEndOf="@+id/menu_button"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/regular"
                         android:text="소속 학교"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/imageView2"
                         android:layout_width="16dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/arrow_down_icon" />
+                        android:src="@drawable/arrow_down_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView6"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/school_name_text"
@@ -168,13 +177,13 @@
                 android:text="오늘의 급식"
                 android:textColor="@color/text_black"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/view_all_button"
+                app:layout_constraintBottom_toBottomOf="@+id/view_button"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/view_all_button" />
+                app:layout_constraintTop_toTopOf="@+id/view_button" />
 
             <LinearLayout
-                android:id="@+id/view_all_button"
-                android:layout_width="48dp"
+                android:id="@+id/view_button"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -187,7 +196,7 @@
                     android:layout_gravity="center"
                     android:fontFamily="@font/regular"
                     android:gravity="center"
-                    android:text="view all"
+                    android:text="상세 보기"
                     android:textColor="@color/primary_color"
                     android:textSize="14sp" />
 
