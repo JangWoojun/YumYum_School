@@ -141,22 +141,246 @@
             app:layout_constraintStart_toStartOf="@+id/constraintLayout"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
-        <RelativeLayout
+        <HorizontalScrollView
+            android:scrollbars="none"
             android:id="@+id/relativeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginHorizontal="22dp"
             android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false" >
 
-            <HorizontalScrollView
-                android:id="@+id/date_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:nestedScrollingEnabled="false" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
-        </RelativeLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/monday_button"
+                    app:cardCornerRadius="25dp"
+                    android:layout_width="100dp"
+                    app:strokeWidth="1.5dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/primary_color"
+                    android:layout_height="130dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/bold"
+                            android:text="월"
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toTopOf="@+id/monday_date_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:textColor="@color/text_black"
+                            android:fontFamily="@font/regular"
+                            android:id="@+id/monday_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="38dp"
+                            android:text="01월 10일"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/tuesday_button"
+                    app:cardCornerRadius="25dp"
+                    android:layout_width="100dp"
+                    app:strokeWidth="1.5dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="130dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/bold"
+                            android:text="화"
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toTopOf="@+id/tuesday_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:textColor="@color/text_black"
+                            android:fontFamily="@font/regular"
+                            android:id="@+id/tuesday_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="38dp"
+                            android:text="01월 11일"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/wednesday_button"
+                    app:cardCornerRadius="25dp"
+                    android:layout_width="100dp"
+                    app:strokeWidth="1.5dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="130dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/bold"
+                            android:text="수"
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toTopOf="@+id/wednesday_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:textColor="@color/text_black"
+                            android:fontFamily="@font/regular"
+                            android:id="@+id/wednesday_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="38dp"
+                            android:text="01월 12일"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thursday_button"
+                    app:cardCornerRadius="25dp"
+                    android:layout_width="100dp"
+                    app:strokeWidth="1.5dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="130dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/bold"
+                            android:text="목"
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toTopOf="@+id/thursday_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:textColor="@color/text_black"
+                            android:fontFamily="@font/regular"
+                            android:id="@+id/thursday_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="38dp"
+                            android:text="01월 13일"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/friday_button"
+                    app:cardCornerRadius="25dp"
+                    android:layout_width="100dp"
+                    app:strokeWidth="1.5dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="130dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/bold"
+                            android:text="금"
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toTopOf="@+id/friday_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:textColor="@color/text_black"
+                            android:fontFamily="@font/regular"
+                            android:id="@+id/friday_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="38dp"
+                            android:text="01월 14일"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="45dp"
@@ -214,7 +438,7 @@
             android:layout_marginHorizontal="22dp"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" >
 
-            <HorizontalScrollView
+            <androidx.recyclerview.widget.RecyclerView
                 android:nestedScrollingEnabled="false"
                 android:id="@+id/lunch_recyclerview"
                 android:layout_width="match_parent"
