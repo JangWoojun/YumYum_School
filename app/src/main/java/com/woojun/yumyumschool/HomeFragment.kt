@@ -1,6 +1,5 @@
 package com.woojun.yumyumschool
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -84,11 +83,12 @@ class HomeFragment : Fragment() {
 
     private fun resetButtonColors() {
         binding.apply {
-            mondayButton.strokeColor = Color.TRANSPARENT
-            tuesdayButton.strokeColor = Color.TRANSPARENT
-            wednesdayButton.strokeColor = Color.TRANSPARENT
-            thursdayButton.strokeColor = Color.TRANSPARENT
-            fridayButton.strokeColor = Color.TRANSPARENT
+            val gray = ContextCompat.getColor(requireContext(), R.color.gray)
+            mondayButton.strokeColor = gray
+            tuesdayButton.strokeColor = gray
+            wednesdayButton.strokeColor = gray
+            thursdayButton.strokeColor = gray
+            fridayButton.strokeColor = gray
         }
     }
 
